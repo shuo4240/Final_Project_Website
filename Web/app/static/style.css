@@ -1,0 +1,648 @@
+/* base.html */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root{
+    --bg-color: rgba(200, 200, 200, 0.2);
+    --text-color: #222327;
+    --main-color: rgba(249, 105, 14, 0.8);
+}
+
+body{
+    min-height: 100vh;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 28px 12%;
+    transition: all .50s ease;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo i{
+    color: var(--main-color);
+    font-size: 28px;
+    margin-right: 3px;
+}
+
+.logo span{
+    color: var(--text-color);
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.navbar{
+    display: flex;
+}
+
+.navbar a{
+    color: var(--text-color);
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 5px 0;
+    margin: 0 30px;
+    transition: all .50s ease;
+    text-decoration: none;
+}
+
+.navbar a:visited{
+    text-decoration: none;
+}
+
+.navbar a:hover{
+    color: var(--main-color);
+}
+
+.navbar a.active{
+    color: var(--main-color);
+}
+
+.SignIn{
+    display: flex;
+    align-items: center;
+}
+
+.SignIn a{
+    text-decoration: none;
+    margin-right: 25px;
+    margin-left: 10px;
+    color: var(--text-color);
+    font-size: 1.4rem;
+    font-weight: 500;
+    transition: all .50s ease;
+}
+
+.SignIn a.active{
+    color: var(--main-color);
+}
+
+.user{
+    display: flex;
+    align-items: center;
+}
+
+
+.user i{
+    color: var(--main-color);
+    font-size: 28px;
+    margin-right: 7px;
+}
+
+.SignIn a:hover{
+    color: var(--main-color);
+}
+
+#menu-icon{
+    font-size: 35px;
+    color: var(--text-color);
+    cursor: pointer;
+    z-index: 10001;
+}
+
+main .content{
+    padding-top: 120px;
+    display: flex;
+    justify-content: center;
+}
+
+/* login.html */
+main .outer_background.login_background{
+    display: flex;
+    justify-content: center;
+    width: 800px;
+    height:550px;
+    background-color: rgb(251, 140, 28, 0.5);
+    border-radius: 20px;
+    padding-top: 50px;
+}
+
+main .inner_background.login_background{
+    background-color: white;
+    padding: 50px;
+    width:500px;
+    height:400px;
+    border-radius: 20px
+}
+
+main .title{
+    color: rgb(251, 140, 28);
+}
+
+main .description{
+    font-size: 20px;
+}
+
+/* register.html */
+main .outer_background.register_background{
+    display: flex;
+    justify-content: center;
+    width: 800px;
+    height:700px;
+    background-color: rgb(251, 140, 28, 0.5);
+    border-radius: 20px;
+    padding-top: 50px;
+}
+
+main .inner_background.register_background{
+    background-color: white;
+    padding: 50px;
+    width:500px;
+    height:600px;
+    border-radius: 20px
+}
+
+/* OtherWeb.html */
+.usefulWebsite{
+    width: 1100px;
+}
+
+.Intro_title{
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+.websites{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hyperlink{
+    display:flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    color:black;
+    text-decoration: none;
+    flex:1;
+}
+
+.hyperlink:hover{
+    text-decoration: none;
+    color:black;
+}
+
+.description{
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 18px;
+    color: black;
+}
+
+.hyperlink_button{
+    background-color: lightgray;
+    border: none;
+    font-size: 18px;
+    border-radius: 20px
+}
+
+.hyperlink_button:hover{
+    background-color: gray;
+    color: black;
+    transition: 0.8s;
+}
+
+.icon{
+    margin-right: 10px;
+}
+.website_title{
+    font-size: 26px;
+}
+
+/* ChooseGame.html */
+.choose_game{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.hyperlink_img{
+    padding: 10px;
+    color:black;
+    text-decoration: none;
+    flex:1;
+}
+
+.hyperlink_img:hover{
+    text-decoration: none;
+    color:black;
+}
+
+/* ChatBot */
+.chatbot-toggler {
+    position: fixed;
+    bottom: 30px;
+    right: 35px;
+    outline: none;
+    border: none;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgb(251, 140, 28);
+    transition: all 0.2s ease;
+}
+
+.robot_name{
+    padding-left: 110px;
+    padding-top: 20px;
+}
+
+body.show-chatbot .chatbot-toggler {
+    transform: rotate(90deg);
+}
+.chatbot-toggler span {
+    color: #fff;
+    position: absolute;
+}
+.chatbot-toggler span:last-child,
+body.show-chatbot .chatbot-toggler span:first-child  {
+    opacity: 0;
+}
+body.show-chatbot .chatbot-toggler span:last-child {
+    opacity: 1;
+}
+.chatbot {
+    position: fixed;
+    right: 35px;
+    bottom: 90px;
+    width: 420px;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.5);
+    transform-origin: bottom right;
+    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+                0 32px 64px -48px rgba(0,0,0,0.5);
+    transition: all 0.1s ease;
+}
+body.show-chatbot .chatbot {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+.chatbot header {
+    padding: 16px 0;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    background: rgb(251, 140, 28);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.chatbot header span {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    display: none;
+    cursor: pointer;
+   transform: translateY(-50%);
+}
+header h2 {
+    font-size: 1.4rem;
+}
+.chatbot .chatbox {
+    overflow-y: auto;
+    height: 510px;
+    padding: 30px 20px 100px;
+}
+.chatbot :where(.chatbox, textarea)::-webkit-scrollbar {
+    width: 6px;
+}
+.chatbot :where(.chatbox, textarea)::-webkit-scrollbar-track {
+    background: #fff;
+    border-radius: 25px;
+}
+.chatbot :where(.chatbox, textarea)::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 25px;
+}
+.chatbox .chat {
+    display: flex;
+    list-style: none;
+}
+.chatbox .outgoing {
+    margin: 20px 0;
+    justify-content: flex-end;
+}
+.chatbox .incoming span {
+    width: 32px;
+    height: 32px;
+    color: #fff;
+    cursor: default;
+    text-align: center;
+    line-height: 32px;
+    align-self: flex-end;
+    background: rgb(251, 140, 28);
+    border-radius: 4px;
+    margin: 0 10px 7px 0;
+}
+.chatbox .chat p {
+    white-space: pre-wrap;
+    padding: 12px 16px;
+    border-radius: 10px 10px 0 10px;
+    max-width: 75%;
+    color: #fff;
+    font-size: 0.95rem;
+    background: rgb(251, 140, 28);
+}
+.chatbox .incoming p {
+    border-radius: 10px 10px 10px 0;
+}
+.chatbox .chat p.error {
+    color: #721c24;
+    background: #f8d7da;
+}
+.chatbox .incoming p {
+    color: #000;
+    background: #f2f2f2;
+}
+.chatbot .chat-input {
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    padding: 3px 20px;
+    border-top: 1px solid #ddd;
+}
+.chat-input textarea {
+    height: 55px;
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    max-height: 180px;
+    padding: 15px 15px 15px 0;
+    font-size: 0.95rem;
+}
+.chat-input span {
+    align-self: flex-end;
+    color: rgb(251, 140, 28);
+    cursor: pointer;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+    font-size: 1.35rem;
+}
+.chat-input textarea:valid ~ span {
+    visibility: visible;
+}
+@media (max-width: 490px) {
+  .chatbot-toggler {
+      right: 20px;
+      bottom: 20px;
+  }
+  .chatbot {
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      border-radius: 0;
+      width: 100%;
+  }
+  .chatbot .chatbox {
+      height: 90%;
+      padding: 25px 15px 100px;
+  }
+  .chatbot .chat-input {
+      padding: 5px 15px;
+  }
+  .chatbot header span {
+      display: block;
+  }
+}
+
+/* SideBar */
+.SideBar{
+    background: rgb(127,127,127, 0.55);
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    overflow-y: auto;
+    transition: 0.6s ease;
+    transition-property: left;
+    opacity: 85%;
+}
+
+.SideBar .head .name{
+    font-size: 20px;
+}
+
+.head{
+    background: rgb(127,127,127)
+}
+
+.bx.bx-user-circle{
+    font-size:150px;
+    margin: 10px 10px 10px 50px;
+    border-radius: 80%;
+    border: 5px solid #b4b8b9;
+}
+
+.bx.bx-x-circle{
+    font-size: 35px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.head .name{
+    text-align: center;
+    font-weight: 500;
+    font-size: 40px;
+    padding-bottom: 13px;
+    padding-left: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.menu .item{
+    color: black;
+    font-size: 35px;
+    margin: 10px 10px 30px 13px;
+}
+
+.menu .sub-setting{
+    font-size: 20px;
+    font-weight:400;
+}
+
+.menu .item.hyperlink{
+    text-decoration: none;
+    color: black;
+}
+
+.bxs-cog{
+    color: black;
+    font-size: 35px;
+    margin: 10px;
+}
+
+.bx-log-out{
+    color: black;
+    font-size: 35px;
+    margin: 10px 14px 10px 7px;
+}
+
+.SideBar.active{
+    left: 0;
+}
+
+/* flash */
+.flash{
+    padding-top:100px;
+}
+
+/* update_username */
+main .outer_background.update_background{
+    display: flex;
+    justify-content: center;
+    width: 800px;
+    height:450px;
+    background-color: rgb(251, 140, 28, 0.5);
+    border-radius: 20px;
+    padding-top: 50px;
+}
+
+main .inner_background.update_background{
+    background-color: white;
+    padding: 50px;
+    width:500px;
+    height:350px;
+    border-radius: 20px
+}
+
+/*update_password.html*/
+
+main .outer_background.psw_background{
+    display: flex;
+    justify-content: center;
+    width: 800px;
+    height:600px;
+    background-color: rgb(251, 140, 28, 0.5);
+    border-radius: 20px;
+    padding-top: 50px;
+}
+
+main .inner_background.psw_background{
+    background-color: white;
+    padding: 50px;
+    width:500px;
+    height:500px;
+    border-radius: 20px
+}
+
+/* guess_word */
+
+main .outer_wrapper{
+    display: flex;
+    justify-content: center;
+    width: 800px;
+    height: 700px;
+    background: rgb(251, 140, 28, 0.5);
+    border-radius: 10px;
+    padding-top: 100px;
+}
+
+main .inner_wrapper{
+    background: #fff;
+    padding: 50px;
+    width:550px;
+    height:500px;
+    border-radius: 20px
+}
+
+.inner_wrapper h1{
+    font-size:28px;
+    font-weight: 700;
+    padding: 20px 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+.inner_wrapper .guess_content{
+    display:flex;
+    flex-wrap: wrap;
+    margin: 25px 25px 5px;
+}
+
+.content .typing-input{
+    opacity: 0;
+    z-index: -999;
+    position: absolute;
+}
+
+.guess_content .inputs{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.inputs input{
+    height: 57px;
+    width: 56px;
+    margin: 4px;
+    color: rgb(251, 140, 28);
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    background: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    border: 1px solid #b5b5b5;
+}
+
+.content .details{
+    margin: 15px 0 25px;
+}
+
+.details p{
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.guess_content .reset-btn{
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    margin:5px;
+    color: #fff;
+    font-size: 17px;
+    padding: 15px 0;
+    background: rgb(251, 140, 28);
+    border-radius: 5px;
+}
+
+.guess_content .add-btn{
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    margin:5px;
+    color: #fff;
+    font-size: 17px;
+    padding: 15px 0;
+    background: rgb(251, 140, 28);
+    border-radius: 5px;
+}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}猜單字{% endblock %}
+
+{% block content %}
+    <div class="outer_wrapper">
+        <div class="inner_wrapper">
+            <h1>Guess the Word</h1>
+            <div class="guess_content">
+                <input type="text" class="typing-input" maxlength="1">
+                <div class="inputs"></div>
+                <div class="details">
+                    <p class="hint">Hint: <span>Hint will be shown here</span></p>
+                </div>
+
+                <button class="reset-btn">Reset Game</button>
+                <button class="add-btn">Add Vocabulary</button>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

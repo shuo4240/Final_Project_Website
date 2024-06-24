@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}更新使用者名稱{% endblock %}
+
+{% block content %}
+    <div class="outer_background update_background">
+        <div class="inner_background update_background">
+            <h1 class="title"> Updates Username </h1>
+            <br/><br/>
+            {{ form.hidden_tag() }}
+            <form method="post">
+                {{ form.new_username.label(class="form-label")}}
+                {{ form.new_username(class="form-control", style="width:250px") }}
+                <br/>
+                {{ form.csrf_token }}
+                {{ form.submit(class="btn btn-warning") }}
+            </form>
+        </div>
+    </div>
+{% endblock %}

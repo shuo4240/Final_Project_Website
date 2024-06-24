@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}註冊{% endblock %}
+
+{% block content %}
+    <div class="outer_background  register_background">
+        <div class="inner_background register_background">
+            <h1 class="title"> Register </h1>
+            <br/><br/>
+            {{ form.hidden_tag() }}
+            <form method="post">
+                {{ form.username.label(class="form-label")}}
+                {{ form.username(class="form-control", style="width:250px") }}
+                <br/>
+                {{ form.email.label(class="form-label")}}
+                {{ form.email(class="form-control", style="width:250px") }}
+                <br/>
+                {{ form.password.label(class="form-label")}}
+                {{ form.password(class="form-control", style="width:250px") }}
+                <br/>
+                {{ form.password2.label(class="form-label")}}
+                {{ form.password2(class="form-control", style="width:250px") }}
+                <br/>
+                {{ form.csrf_token }}
+                {{ form.submit(class="btn btn-warning") }}
+            </form>
+        </div>
+    </div>
+{% endblock %}
